@@ -1,0 +1,85 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif; /* Apply Poppins font to the entire body */
+}
+
+#overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 84px; /* Large font size for the header */
+    font-weight: 700; /* Bold font weight for the header */
+    margin: 0 0 20px; /* Adjust spacing below the header */
+    line-height: 90px; /* Adjust line height for the header */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff0099, #9103cb, #3f5efb);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease infinite;
+}
+
+p {
+    font-size: 24px; /* Adjust font size for the subheader */
+    font-weight: 400; /* Regular font weight for the subheader */
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Initial border opacity */
+    border-radius: 20px;
+    transition: all 0.3s ease; /* Smooth transition for hover and focus */
+    font-weight: 500;
+    margin-top: 20px;
+    position: relative; /* Ensure positioning context for pseudo-elements */
+    overflow: hidden; /* Keep pseudo-elements within the button bounds */
+    backdrop-filter: blur(5px);
+}
+
+/* Hover and focus styles */
+.contact-btn:hover,
+.contact-btn:focus {
+    border-color: rgba(255, 255, 255, 1); /* Brighten border */
+    color: #fff; /* Maintain text color */
+}
+
+/* Icon styling */
+.contact-btn .icon {
+    margin-right: 8px;
+    fill: currentColor; /* Use the text color for the icon */
+}
+
+/* Glow effect on hover */
+.contact-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
